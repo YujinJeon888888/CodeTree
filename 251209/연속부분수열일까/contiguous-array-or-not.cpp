@@ -28,19 +28,21 @@ int main() {
         if(aArr[i]==bArr[0]){
             for(int count=1, index=i+1;count<bArr.size();count++, index++){
                 if(index>=aArr.size()){
-                    cout<<"No";
-                    return 0;
+                    //cout<<"No";
+                    break;
                 }
                 if(aArr[index]!=bArr[count]){
-                    cout<<"No";
+                    //cout<<"No";
+                    break;
+                }
+                if(count==bArr.size()-1){
+                    cout<<"Yes";
                     return 0;
                 }
             }
-            cout<<"Yes";
-            return 0;
         }
     }
     
-
+    cout<<"No";
     return 0;
 }
