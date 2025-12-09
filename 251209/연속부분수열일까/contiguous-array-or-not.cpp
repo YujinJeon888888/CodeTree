@@ -26,22 +26,18 @@ int main() {
     //여기서, 인덱스가 벗어난다면 "No"출력 후 return
     for(int i=0;i<aArr.size();i++){
         if(aArr[i]==bArr[0]){
-            int index=i+1;
-            for(int count=1;count<bArr.size();){
+            for(int count=1, index=i+1;count<bArr.size();count++, index++){
                 if(index>=aArr.size()){
                     cout<<"No";
-                    return -1;
+                    return 0;
                 }
-                if(aArr[index]==bArr[count]){
-                    index++;
-                }
-                else{
+                if(aArr[index]!=bArr[count]){
                     cout<<"No";
-                    return -1;
+                    return 0;
                 }
             }
             cout<<"Yes";
-            return 1;
+            return 0;
         }
     }
     
