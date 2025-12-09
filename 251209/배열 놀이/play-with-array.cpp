@@ -31,6 +31,7 @@ int main() {
                     if(ele==b){
                         cout<<count<<'\n';
                         find=true;
+                        break;
                     }
                     count++;
                 }
