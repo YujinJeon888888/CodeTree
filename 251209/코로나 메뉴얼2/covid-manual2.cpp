@@ -3,7 +3,7 @@ using namespace std;
 
 int main() {
     // Please write your code here.
-    int a=0,b=0,c=0,d=0;
+    int a=0,b=0,C=0,d=0;
     for(int i=0;i<3;i++){
         char c;
         int degree;
@@ -16,7 +16,7 @@ int main() {
             }
             //이상x
             else{
-                c++;
+                C++;
             }
         }
         //증상x
@@ -30,7 +30,7 @@ int main() {
         }
     }
 
-    cout<<a<<' '<<b<<' '<<c<<' '<<d<<' ';
+    cout<<a<<' '<<b<<' '<<C<<' '<<d<<' ';
     if(a>=2){
         cout<<'E';
     }
