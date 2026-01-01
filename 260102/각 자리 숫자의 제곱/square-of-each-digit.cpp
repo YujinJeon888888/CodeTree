@@ -5,7 +5,7 @@ using namespace std;
 int N;
 
 //함수: 각 자리수의 제곱의 합을 출력
-void SumOfEachSquare(int num){
+int SumOfEachSquare(int num){
     //종료조건: 한자리수면 => num의 제곱을 리턴
     if(num%10==num){
         return num*num;
