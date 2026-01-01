@@ -9,14 +9,17 @@ int sum=0;
 int Divide(int num){
     //종료조건: num==1
     if(num==1){
+        sum++;
         return 1;
     }
 
     if(num&1==1){
-        sum+=Divide(num/3);
+        sum++;
+        Divide(num/3);
     }
     else{
-        sum+=Divide(num/2);
+        sum++;
+        Divide(num/2);
     }
 }
 
