@@ -3,34 +3,28 @@
 using namespace std;
 
 int N;
-int count=0;
 
-//
-int Func(int num){
-    //종료조건
+int sum=0;
+
+int Divide(int num){
+    //종료조건: num==1
     if(num==1){
-        return;
+        return 1;
     }
 
-    //n이 짝수면 2로나누고 홀수면 3으로 나눈 몫을 취함
-    //홀수
-    if(num&1==0){
-        count++;
-        return num/3;
+    if(num&1==1){
+        sum+=Divide(num/3);
     }
-    //짝수
     else{
-        count++;
-        return num/2;
+        sum+=Divide(num/2);
     }
-
 }
 
 int main() {
     cin >> N;
+    Divide(N);
 
-    // Please write your code here.
-    Func(N);
-    cout<<count;
+    cout<<sum;
+
     return 0;
 }
