@@ -14,12 +14,12 @@ int DivideCount(int N){
     //홀수
     if(N&1){
         //나눌횟수 + 지금 나눈 횟수
-        DivideCount(N/3)+1;
+        return DivideCount(N/3)+1;
     }
     //짝수
     else{
         //나눌횟수 + 지금 나눈 횟수
-        DivideCount(N/2)+1;
+        return DivideCount(N/2)+1;
     }
 }
 
