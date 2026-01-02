@@ -26,6 +26,6 @@ int main() {
     cin >> N;
 
     // Please write your code here.
-    GetNum(n);
+    GetNum(N);
     return 0;
 }
