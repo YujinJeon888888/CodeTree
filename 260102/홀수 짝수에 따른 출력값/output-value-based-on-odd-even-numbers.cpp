@@ -4,30 +4,20 @@ using namespace std;
 
 int N;
 
-//1부터 N까지의 합을 출력하는 함수
-int SumOdd(int n){
+//1부터 n까지, n과 홀짝이 같은 수의 합을 반환
+int GetNum(int n){
     //종료조건
-    if(n<=1){
+    if(n==1){
         return 1;
     }
-    
-
-    //일반화
-    return Sum(n-1) + n;
-}
-
-//2부터 N까지의 합을 출력하는 함수
-int SumEven(int n){
-    //종료조건
-    if(n<=2){
+    else if(n==2){
         return 2;
     }
-    
 
-    //일반화
-    return Sum(n-1) + n;
+    //일반화(!!!홀짝이 같으려면, 2를 빼야 함!!!)
+    return GetNum(n-2) + n;
+
 }
-
 
 
 
@@ -36,11 +26,6 @@ int main() {
     cin >> N;
 
     // Please write your code here.
-    if(N&1){
-        cout<<SumOdd(N);
-    }
-    else{
-        cout<<SumEven(N);
-    }
+    GetNum(n);
     return 0;
 }
