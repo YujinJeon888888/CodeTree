@@ -9,7 +9,7 @@ int main() {
     cin >> str;
 
     // Please write your code here.
-    sort(str.begin(), str.end(), greater<string>());
+    sort(str.begin(), str.end());
     cout<<str;
     return 0;
 }
