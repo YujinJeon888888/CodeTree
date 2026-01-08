@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include <algorithm>
 using namespace std;
 
 int n;
@@ -12,9 +12,18 @@ int main() {
     }
 
     // Please write your code here.
-    int size = sizeof(nums)/typeof(nums);
-    cout<< sort(nums,nums+size) << '\n';
-    cout<< sort(nums,sums+size,greater<int>());
+    
+    sort(nums,nums+n);
+    for(int i=0;i<n;i++){
+        cout<<nums[i]<<' ';
+    }
+    cout<<'\n';
+    
+    sort(nums,nums+n,greater<int>());
+    for(int i=0;i<n;i++){
+        cout<<nums[i]<<' ';
+    }
+    cout<<'\n';
 
     return 0;
 }
