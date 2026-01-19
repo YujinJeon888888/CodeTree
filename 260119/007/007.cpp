@@ -9,15 +9,10 @@ class Info{
         char meeting_point;
         int meeting_time;
 
-        Info(string secret_code, char meeting_point, int meeting_time){
-            this->secret_code = secret_code;
-            this->meeting_point = meeting_point;
-            this->meeting_time = meeting_time;
-        }
-}
+};
 
 int main() {
-    Info info = new Info();
+    Info info;
 
     cin >> info.secret_code >> info.meeting_point >> info.meeting_time;
 
