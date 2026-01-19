@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-
+#include "algorithm"
 using namespace std;
 
 string word1;
@@ -20,7 +20,7 @@ int main() {
     // 정렬하여 모든 원소 같은지 확인
     sort(word1.begin(),word1.end());
     sort(word2.begin(),word2.end());
-    
+
     for(int i=0;i<word1.length();i++){
         if(word1[i]!=word2[i]){
             cout<<"No";
