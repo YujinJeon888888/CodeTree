@@ -24,8 +24,9 @@ int main() {
     for(int i=0;i<n;i++){
         if(A[i]!=B[i]){
             cout<<"No";
+            return 0;
         }
-        return 0;
+        
     }
     cout<<"Yes";
     return 0;
