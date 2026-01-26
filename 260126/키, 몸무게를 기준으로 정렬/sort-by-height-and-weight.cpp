@@ -8,7 +8,7 @@ class Student{
 string name;
 int height;
 int weight;
-}
+};
 
 int n;
 
