@@ -25,6 +25,9 @@ int main() {
     }
 
     // Please write your code here.
+    cout << fixed;//소숫점고정
+    cout.precision(1);//소숫점이하 1자리
+    
     sort(students.begin(),students.end(),cmpByName);
     cout<<"name"<<'\n';
     for(int i=0;i<5;i++){
