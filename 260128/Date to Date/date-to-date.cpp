@@ -23,7 +23,8 @@ int main() {
     }
     days2+=d2;
     //2계산결과 - 1계산결과
-    cout<<days2-days1;
+    //시작일을 포함해야 하므로 +1
+    cout<<days2-days1+1;
     
     return 0;
 }
