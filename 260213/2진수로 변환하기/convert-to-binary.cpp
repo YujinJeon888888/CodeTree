@@ -9,9 +9,8 @@ int main() {
 
     // Please write your code here.
     // 벡터 초기화
-    vector<int> binary;
+    vector<int> binary(50000,0);
     int index=0;
-    binary.reserve(50000);
     // 종료컨디션: n<2이면 n넣고 종료
     while(n>2){
         // n/2해가며, 2로 나눈 나머지를 vector[index++]에 저장
