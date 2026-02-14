@@ -14,13 +14,12 @@ int main() {
     int answer=0;
     for (int i = 0; i < n; i++) {
         cin >> x[i] >> dir[i];
-        
         for(int j=x[i];j>0;j--){
             if(dir[i]=='R'){
-                line[index++];
+                line[index++]++;
             }
             else{
-                line[index--];
+                line[index--]++;
             }
         }
     }
