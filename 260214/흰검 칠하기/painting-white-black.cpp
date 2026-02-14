@@ -24,25 +24,29 @@ int main() {
     for (int i = 0; i < n; i++) {
         cin >> x[i] >> dir[i];
         //L은 흰색, R은 검은색 칠하기
-        for(int j=x[i];j>0;j--){
-            if(dir[i]=='L'){
+        for (int j = 0; j < x[i]; j++) {
+            
+            // 1. 현재 서 있는 칸 칠하기 (R이든 L이든 이동하기 전에 칠합니다!)
+            if (dir[i] == 'L') {
                 whiteLine[index]++;
-                answerColor[index]=1;
-                index--;
-
-                //회색 컨디션 체크
-                if(whiteLine[index]>=2 && blackLine[index]>=2){
-                    answerColor[index]=3;
-                }
-            }
-            else{
-                index++;
+                answerColor[index] = 1;
+            } else { // 'R'인 경우
                 blackLine[index]++;
-                answerColor[index]=2;
-                
-                //회색 컨디션 체크
-                if(whiteLine[index]>=2&&blackLine[index]>=2){
-                    answerColor[index]=3;
+                answerColor[index] = 2;
+            }
+            
+            // 2. 회색 조건 체크 (작성하신 논리 아주 완벽합니다!)
+            // 앞서 흰/검으로 덮었어도, 여기서 조건 만족하면 다시 회색(3)이 되므로 안전!
+            if (whiteLine[index] >= 2 && blackLine[index] >= 2) {
+                answerColor[index] = 3; 
+            }
+
+            // 3. 다음 칸으로 이동하기 (⭐핵심: 마지막 바퀴에는 이동 안 함!⭐)
+            if (j < x[i] - 1) { // j가 마지막(x[i]-1)이 아닐 때만 이동
+                if (dir[i] == 'L') {
+                    index--;
+                } else {
+                    index++;
                 }
             }
         }
