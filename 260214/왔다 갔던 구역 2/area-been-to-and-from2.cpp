@@ -10,7 +10,7 @@ char dir[100];
 int main() {
     cin >> n;
     vector<int> line(100,0);
-    int index=0;
+    int index=50;
     int answer=0;
     for (int i = 0; i < n; i++) {
         cin >> x[i] >> dir[i];
