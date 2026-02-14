@@ -16,10 +16,12 @@ int main() {
         cin >> x[i] >> dir[i];
         for(int j=x[i];j>0;j--){
             if(dir[i]=='R'){
-                line[index++]++;
+                line[index]++;
+                index++;
             }
             else{
-                line[index--]++;
+                index--;
+                line[index]--;
             }
         }
     }
