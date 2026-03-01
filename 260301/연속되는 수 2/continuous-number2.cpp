@@ -14,7 +14,7 @@ int main() {
 
     // Please write your code here.
     int count=1;
-    int maxCount=0;
+    int maxCount=1;
     for(int i=1;i<N;i++){
         if(arr[i]==arr[i-1]){
             count++;
