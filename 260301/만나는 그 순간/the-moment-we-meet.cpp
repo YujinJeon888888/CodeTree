@@ -55,7 +55,9 @@ int main() {
     for(int i=0;i<totalTime;i++){
         if(aTimeArr[i]==bTimeArr[i]){
             cout<<aTimeArr[i];
+            return 0;
         }
     }
+    cout<<-1;
     return 0;
 }
