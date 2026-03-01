@@ -20,12 +20,12 @@ int main() {
             count=1;
             continue;
         }
-        if(a[i]==a[i-1]){
+        if(arr[i]==arr[i-1]){
             count++;
         }
-        if(a[i]!=a[i-1]){
+        if(arr[i]!=arr[i-1]){
             maxCount=max(maxCount,count);
-            count=0;
+            count=1;
         }
     }
 
