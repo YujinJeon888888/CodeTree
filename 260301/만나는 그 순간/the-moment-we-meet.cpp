@@ -49,7 +49,7 @@ int main() {
     //b
     for(const auto& val:t2){
         for(int i=bTimeIndex;i<val;i++,bTimeIndex++){
-            bPos = bPos + (1*(d.front()=='L'?-1:1));
+            bPos = bPos + (1*(d2.front()=='L'?-1:1));
             bTimeArr[i]=bPos;
         }
         d2.pop();
@@ -57,7 +57,7 @@ int main() {
     //결과: ab배열 순회하여,최초로 값이 같아지는 곳에서 시간 프린트.
     for(int i=0;i<totalTime;i++){
         if(aTimeArr[i]==bTimeArr[i]){
-            cout<<aTimeArr[i];
+            cout<<i+1;
             return 0;
         }
     }
