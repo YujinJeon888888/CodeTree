@@ -17,7 +17,7 @@ int main() {
     int maxCount=1;
     for(int i=1;i<N;i++){
         if((arr[i]<0&&arr[i-1]<0)||(arr[i]>0&&arr[i-1]>0)){
-            count++
+            count++;
         }
         else{
             count=1;
