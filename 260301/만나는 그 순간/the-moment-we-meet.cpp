@@ -39,7 +39,7 @@ int main(){
     int aTimeIndex=0,bTimeIndex=0;
 
     //이동
-    for(int i=;i<n;i++){
+    for(int i=0;i<n;i++){
         int val=t[i];
 
         for(int step=0;step<val;step++){
