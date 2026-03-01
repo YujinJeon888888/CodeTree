@@ -13,17 +13,13 @@ int main() {
     }
 
     // Please write your code here.
-    int count=0;
+    int count=1;
     int maxCount=0;
-    for(int i=0;i<N;i++){
-        if(i==0){
-            count=1;
-            continue;
-        }
+    for(int i=1;i<N;i++){
         if(arr[i]==arr[i-1]){
             count++;
         }
-        if(arr[i]!=arr[i-1]){
+        else{
             count=1;
         }
         maxCount=max(maxCount,count);
