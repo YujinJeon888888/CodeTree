@@ -24,9 +24,9 @@ int main() {
             count++;
         }
         if(arr[i]!=arr[i-1]){
-            maxCount=max(maxCount,count);
             count=1;
         }
+        maxCount=max(maxCount,count);
     }
 
     cout<<maxCount;
