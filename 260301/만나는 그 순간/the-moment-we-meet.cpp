@@ -1,16 +1,18 @@
 #include <iostream>
 #include <queue>
+#include <vector>
 using namespace std;
 
 int n, m;
 queue<char> d;
-int t[1000];
+
 queue<char> d2;
-int t2[1000];
+
 
 int main() {
     cin >> n >> m;
-
+    vector<int> t(n);
+    vector<int> t2(m);
     for (int i = 0; i < n; i++) {
         char direction;
         cin >> direction;
