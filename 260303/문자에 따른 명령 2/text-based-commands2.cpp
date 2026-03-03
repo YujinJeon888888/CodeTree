@@ -3,6 +3,9 @@
 using namespace std;
 
 string dirs;
+//동남서북
+int dx[4] = {1,0,-1,0};
+int dy[4] = {0,-1,0,1};
 
 //동남서북으로 정의되어있다고 가정
 void Rotate(char direction, int &dirIndex){
@@ -24,9 +27,6 @@ int main() {
     cin >> dirs;
 
     // Please write your code here.
-    //동남서북
-    int dx[4] = {1,0,-1,0};
-    int dy[4] = {0,-1,0,1};
     int dirIndex = 3;
     int x = 0, y = 0;
     for(const auto& val:dirs){
