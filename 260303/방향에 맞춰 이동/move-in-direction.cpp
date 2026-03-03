@@ -28,8 +28,8 @@ int main() {
             dirIndex=3;
         }
         
-        x+=dx[dir];
-        y+=dy[dir];
+        x+=dx[dirIndex];
+        y+=dy[dirIndex];
     }
 
     // Please write your code here.
