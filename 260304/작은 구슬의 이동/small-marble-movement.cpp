@@ -46,7 +46,7 @@ void Move(vector<vector<int>> &board, int& dirIndex, int& x, int& y){
     int tempX = x+dx[dirIndex];
     int tempY = y+dy[dirIndex];
     //만약 범위를 벗어나면 
-    if(IsInRange(x,y)==false){
+    if(IsInRange(tempX,tempY)==false){
         //플립 후 이동 x
         dirIndex = IfHitReturnNewDirIndex(dirIndex);
     }
