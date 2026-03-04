@@ -6,7 +6,7 @@ int r,c;
 char d;
 
 //동남서북
-int dRow[4]={0,-1,0,1};
+int dRow[4]={0,1,0,-1};
 int dCol[4]={1,0,-1,0};
 
 //방향 플립
@@ -48,7 +48,7 @@ int main(){
     int col=c;
     int dirIndex=0;
 
-    //방향
+    //방향(동남서북)
     if(d=='R') dirIndex=0;
     else if(d=='D') dirIndex=1;
     else if(d=='L') dirIndex=2;
