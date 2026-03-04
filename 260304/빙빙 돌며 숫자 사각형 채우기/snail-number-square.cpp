@@ -6,10 +6,10 @@ int n, m;
 int arr[100][100];
 //동남서북
 int dCol[4] = {1,0,-1,0};
-int dRow[4] = {0,-1,0,1};
+int dRow[4] = {0,1,0,-1};
 
 //유효체크
-bool CheckValidate(vector<vector<int>>& board,int row, int col)
+bool CheckValidate(vector<vector<int>>& board,int& row, int& col){
     //범위체크
     if(row<0||row>=n){
         return false;
@@ -19,7 +19,7 @@ bool CheckValidate(vector<vector<int>>& board,int row, int col)
     }
     //0인지 체크
     if(board[row][col]!=0){
-        return false
+        return false;
     }    
     return true;
 }
@@ -56,15 +56,22 @@ int main() {
     cin >> n >> m;
     int row=0,col=0;
     int dir=0;
+    int num=1;
     vector<vector<int>> board(n,vector<int>(m,0));
     // Please write your code here.
     for(int i=0;i<n;i++){
         for(int j=0;j<m;j++){
-            int num;
-            cin>>num;
             //무브
             Move(board,row,col,dir,num);
+            num++;
         }
+    }
+
+    for(const auto& row: board){
+        for(const auto& col: row){
+            cout<<col<<' ';
+        }
+        cout<<'\n';
     }
 
     return 0;
