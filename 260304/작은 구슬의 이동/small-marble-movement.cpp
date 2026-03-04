@@ -41,14 +41,16 @@ void Move(int& dirIndex, int& x, int& y){
 }
 
 int main(){
-    cin>>n>>t;
+    cin>>n>>y;
     cin>>r>>c>>d;
 
     int x=r;
     int y=c;
     int dirIndex=0;
 
-    //방향
+    //방향3037void Move(int& dirIndex, int& x, int& y){    else{
+
+틀렸습니다$0
     if(d=='R') dirIndex=0;
     else if(d=='D') dirIndex=1;
     else if(d=='L') dirIndex=2;
