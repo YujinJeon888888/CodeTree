@@ -27,30 +27,28 @@ bool IsInRange(int row,int col){
 }
 
 //이동
-void Move(int& dirIndex, int& x, int& y){
-    int tempX=x+dCol[dirIndex];
-    int tempY=y+dRow[dirIndex];
+void Move(int& dirIndex, int& row, int& col){
+    int tempCol=col+dCol[dirIndex];
+    int tempRow=row+dRow[dirIndex];
 
-    if(IsInRange(tempX,tempY)==false){
+    if(IsInRange(tempRow,tempCol)==false){
         dirIndex=IfHitReturnNewDirIndex(dirIndex);
     }
     else{
-        x=tempX;
-        y=tempY;
+        row=tempRow;
+        col=tempCol;
     }
 }
 
 int main(){
-    cin>>n>>y;
+    cin>>n>>t;
     cin>>r>>c>>d;
 
-    int x=r;
-    int y=c;
+    int row=r;
+    int col=c;
     int dirIndex=0;
 
-    //방향3037void Move(int& dirIndex, int& x, int& y){    else{
-
-틀렸습니다$0
+    //방향
     if(d=='R') dirIndex=0;
     else if(d=='D') dirIndex=1;
     else if(d=='L') dirIndex=2;
@@ -58,9 +56,9 @@ int main(){
 
     //초마다 이동
     for(int i=0;i<t;i++){
-        Move(dirIndex,x,y);
+        Move(dirIndex,row,col);
     }
 
-    cout<<x<<' '<<y;
+    cout<<row<<' '<<col;
     return 0;
 }
