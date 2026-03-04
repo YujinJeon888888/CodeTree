@@ -15,13 +15,13 @@ int IfHitReturnNewDirIndex(int& dirIndex){
     if(dirIndex==0){
         dirIndex= 2;
     }
-    if(dirIndex==1){
+    else if(dirIndex==1){
         dirIndex= 3;
     }
-    if(dirIndex==3){
+    else if(dirIndex==3){
         dirIndex= 1;
     }
-    if(dirIndex==2){
+    else if(dirIndex==2){
         dirIndex= 0;
     }
     return dirIndex;
