@@ -37,7 +37,7 @@ bool CheckComfortable(vector<vector<int>>& board, int row, int col){
         }
     }
 
-    return colorCount>=3?true:false;
+    return colorCount==3?true:false;
 }
 
 int main() {
@@ -48,7 +48,7 @@ int main() {
     }
 
     // Please write your code here.
-    vector<vector<int>> board(N+1,vector<int>(M+1,0));
+    vector<vector<int>> board(N+1,vector<int>(N+1,0));
     //m만큼 for문 돌려서
     for(int i=0;i<M;i++){
         //위치받기
