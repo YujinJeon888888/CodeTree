@@ -40,8 +40,8 @@ int main() {
     int num=1;
     int col=0,row=0;
     board[row][col]=1;
-    //num<=n*m인동안 반복
-    while(num<=n*m){
+    //num<=(n*m)-1인동안 반복 (앞에서 1을 미리 초기화했으므로)
+    while(num<=(n*m)-1){
         //num++
         num++;
         //다음 위치 구하기
@@ -53,7 +53,7 @@ int main() {
             Rotate(dir);
             //rotate한 위치에서 새로 다음위치 구하고 num넣기
             nextRow=row+dRow[dir];
-            nextRow=col+dCol[dir];
+            nextCol=col+dCol[dir];
             board[nextRow][nextCol]=num;
         }
         //else(로테이트 안했으면)
