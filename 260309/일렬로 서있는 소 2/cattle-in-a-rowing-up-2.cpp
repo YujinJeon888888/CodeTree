@@ -14,11 +14,11 @@ int main() {
     // Please write your code here.
     int count=0;
     //for: 픽1
-    for(int i=0;i<n;i++){
+    for(int i=0;i<N;i++){
         //for: 픽2
-        for(int j=i+1;j<n;j++){
+        for(int j=i+1;j<N;j++){
             //for: 픽3
-            for(int k=j+1;k<n;k++){
+            for(int k=j+1;k<N;k++){
                 //확인: 픽1<=픽2<=픽3인가?
                 //true: count++;
                 if(A[i]<=A[j]&&A[j]<=A[k]){
