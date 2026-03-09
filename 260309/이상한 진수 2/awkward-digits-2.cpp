@@ -16,7 +16,7 @@ int main() {
             break;
         }
         //전부 1이면: 끝 플립
-        if(i==a.length()-1&&a[i]==1){
+        if(i==a.length()-1&&a[i]=='1'){
             a[i]=0;
         }
     }
