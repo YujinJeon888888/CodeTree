@@ -17,7 +17,7 @@ int main() {
         //for: 열(최대: -2까지)
         for(int col=0;col<N-2;col++){
             //grid[i][j]+grid[i][j+1]+grid[i][j+2]가 max인지 확인하여 맥시멈갱신
-            maxCount=max(maxCount,grid[i][j]+grid[i][j+1]+grid[i][j+2]);
+            maxCount=max(maxCount,grid[row][col]+grid[row][col+1]+grid[row][col+2]);
         }
     }
     cout<<maxCount;   
