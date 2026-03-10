@@ -19,7 +19,7 @@ int main() {
     int minDis=0;
     //for: 누락 x,y 뽑기
     for(int i=0;i<n;i++){
-        vector<pair> coordinates;
+        vector<pair<int,int>> coordinates;
         int dis=0;
         //출발지
         coordinates.push_back({x[0],y[0]});
