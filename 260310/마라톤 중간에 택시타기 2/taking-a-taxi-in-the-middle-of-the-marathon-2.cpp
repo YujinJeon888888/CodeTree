@@ -1,6 +1,7 @@
 #include <iostream>
 #include <utility> //pair
 #include <vector>
+#include <climits> //INT_MAX
 #include <algorithm>//min
 using namespace std;
 
@@ -16,9 +17,9 @@ int main() {
 
     // Please write your code here.
     //최단거리 초기화
-    int minDis=0;
+    int minDis=INT_MAX;
     //for: 누락 x,y 뽑기
-    for(int i=0;i<n;i++){
+    for(int i=1;i<n-1;i++){
         vector<pair<int,int>> coordinates;
         int dis=0;
         //출발지
