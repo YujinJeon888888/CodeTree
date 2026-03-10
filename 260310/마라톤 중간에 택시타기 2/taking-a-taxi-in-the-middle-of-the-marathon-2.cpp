@@ -34,8 +34,8 @@ int main() {
         //도착지
         coordinates.push_back({x[n-1],y[n-1]});
         //for: 누락 x,y제외 거리 구하기
-        for(int i=0;i<n-2;i++){
-            dis+=abs(coordinates[i].first-coordinates[i+1].first)+(coordinates[i].second-coordinates[i+1].second);
+        for(int j=0;j<n-2;j++){
+            dis+=abs(coordinates[j].first-coordinates[j+1].first)+(coordinates[j].second-coordinates[j+1].second);
         }
         //min갱신
         minDis=min(minDis,dis);           
