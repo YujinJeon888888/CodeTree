@@ -29,7 +29,7 @@ int main() {
                 continue;
             }
             //누락 x,y외 모아넣기
-            coordinates.push_back({x[i],y[i]});
+            coordinates.push_back({x[j],y[j]});
         }
         //도착지
         coordinates.push_back({x[n-1],y[n-1]});
