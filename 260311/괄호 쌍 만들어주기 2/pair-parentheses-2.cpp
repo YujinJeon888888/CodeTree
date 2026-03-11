@@ -10,28 +10,12 @@ int main() {
     cin >> A;
 
     int count=0;
-    //for: 왼쪽괄호
-    for(int i=0;i<A.length();i++){
-        if(A[i]!='('){
-            continue;
-        }
-        //for: 왼쪽괄호
-        for(int j=i+1;j<i+2&&j<A.length();j++){
-            if(A[j]!='('){
-                continue;
-            }
-            //for: 오른쪽 괄호
-            for(int k=j+1;k<A.length();k++){
-                if(A[k]!=')'){
-                    continue;
-                }
-                //for: 오른쪽 괄호
-                for(int l=k+1;l<k+2&&l<A.length();l++){
-                    if(A[l]!=')'){
-                        continue;
-                    }
-                    count++;
-                }
+    int n=(int)A.size();
+
+    for(int i=0;i<n-1;i++){
+        for(int j=i+1;j<n-1;j++){
+            if(A[i]=='('&&A[i+1]=='('&&A[j]==')'&&A[j+1]==')'){
+                count++;
             }
         }
     }
