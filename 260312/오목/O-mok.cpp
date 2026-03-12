@@ -16,7 +16,7 @@ bool IsInRange(int row,int col){
 }
 
 //이 오목돌의 연속성 체크
-void IsLine(int stoneNum,int row, int col){
+bool IsLine(int stoneNum,int row, int col){
     int nextRow=row;
     int nextCol=col;
     int count=1;
@@ -30,7 +30,7 @@ void IsLine(int stoneNum,int row, int col){
                 //true면, 지금 오목돌 출력 후 \n, 라인의 가운데 행렬 출력
                 cout<<stoneNum<<'\n';
                 cout<<nextRow-2+1<<' '<<nextCol+1;
-                exit(1);
+                return true;
             }
         }
         else{
@@ -51,7 +51,7 @@ void IsLine(int stoneNum,int row, int col){
                 //true면, 지금 오목돌 출력 후 \n, 라인의 가운데 행렬 출력
                 cout<<stoneNum<<'\n';
                 cout<<nextRow+1<<' '<<nextCol-2+1;
-                exit(1);
+                return true;
             }
         }
         else{
@@ -72,7 +72,7 @@ void IsLine(int stoneNum,int row, int col){
                 //true면, 지금 오목돌 출력 후 \n, 라인의 가운데 행렬 출력
                 cout<<stoneNum<<'\n';
                 cout<<nextRow-2+1<<' '<<nextCol+2+1;
-                exit(1);
+                return true;
             }
         }
         else{
@@ -93,7 +93,7 @@ void IsLine(int stoneNum,int row, int col){
                 //true면, 지금 오목돌 출력 후 \n, 라인의 가운데 행렬 출력
                 cout<<stoneNum<<'\n';
                 cout<<nextRow-2+1<<' '<<nextCol-2+1;
-                exit(1);
+                return true;
             }
         }
         else{
@@ -103,8 +103,7 @@ void IsLine(int stoneNum,int row, int col){
             break;
         }
     }
-    cout<<0;
-    exit(1);
+    return false;
 }
 
 
@@ -121,11 +120,14 @@ int main() {
                 continue;
             }
             //지금 오목돌을 인자로 넣어서, 연속성 체크
-            IsLine(board[i][j],i,j);    
+            if(IsLine(board[i][j],i,j)){
+                return 0;
+            }
+    
         }
     }
         
-            
+    cout<<0;
                 
 
     return 0;
