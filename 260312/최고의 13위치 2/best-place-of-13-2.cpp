@@ -24,7 +24,7 @@ int main() {
                 for(int col2=0;col2<N-2;col2++){
                     //col 겹치면 continue
                     if(row1==row2){
-                        set<int> s;
+                        unordered_set<int> s;
                         for(int i=0;i<3;i++){
                             s.insert(col1+i);
                             s.insert(col2+i);
