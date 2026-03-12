@@ -106,6 +106,10 @@ int main() {
             }
         }
     }
+    if(maxNum==INT_MIN){
+        cout<<-1;
+        return 0;
+    }
     
     cout<<maxNum;
             
