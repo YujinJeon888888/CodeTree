@@ -24,7 +24,7 @@ int main() {
             }
             
             //평균내기(int)
-            avr=sum/(j-i+1);
+            avr=(float)sum/(j-i+1);
             //for: 평균이 시작점부터 끝점 중 하나의 원소와 같은지 확인
             for(int k=i;k<=j;k++){
                 //같으면: result++
