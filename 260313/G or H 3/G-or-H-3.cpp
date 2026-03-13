@@ -11,7 +11,7 @@ int arr[MAX_NUM+1];
 int main() {
     cin>>n>>k;
     for(int i=0;i<n;i++){
-        int x,char c;
+        int x; char c;
         cin>>x>>c;
         if(c=='G'){
             arr[x]=1;
