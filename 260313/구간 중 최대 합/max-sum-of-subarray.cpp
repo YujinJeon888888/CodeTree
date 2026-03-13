@@ -17,9 +17,10 @@ int main() {
     for(int i=0;i+k<n;i++){
         //for: 시작위치부터 끝위치까지 더하기
         int sum=0;
-        for(int j=i;j+k<n;j++){
+        int index=i;
+        for(int j=0;j<k;j++){
             //sum구하기
-            sum+=arr[j];
+            sum+=arr[index++];
         }
         //최대 sum갱신 
         answer=max(answer,sum);
