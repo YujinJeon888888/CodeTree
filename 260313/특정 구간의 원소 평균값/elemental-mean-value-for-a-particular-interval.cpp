@@ -16,9 +16,9 @@ int main() {
     //for: 시작점
     for(int i=1;i<=n;i++){
         //for: 끝점
-        for(int j=i+1;j<=n;j++){
+        for(int j=i;j<=n;j++){
             // for: 시작점부터 끝점까지 더하고 
-            int sum=0; int avr=0;
+            int sum=0; float avr=0;
             for(int k=i;k<=j;k++){
                 sum+=arr[k];
             }
