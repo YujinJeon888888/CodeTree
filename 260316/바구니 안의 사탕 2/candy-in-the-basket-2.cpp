@@ -20,13 +20,12 @@ int main() {
     int maxCandy=0;
     //for: 중심점
     for(int i=0;i<ARR_SIZE;i++){
-        if(!(i-K>=0 && i+K<ARR_SIZE)){
-            continue;
-        }
-        
         int candyCount=0;
         //for: 중심점-k~중심점+k까지 사탕 수 세기
         for(int j=i-K;j<=i+K;j++){
+            if(!(j-K>=0 && j+K<ARR_SIZE)){
+                continue;
+            }
             candyCount+=arr[j];
         }
         //max갱신
