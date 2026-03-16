@@ -12,7 +12,7 @@ int main() {
     int arr[ARR_SIZE]={0,};
     for (int i = 0; i < N; i++) {
         cin >> candy[i] >> pos[i];
-        arr[pos[i]]=candy[i];
+        arr[pos[i]]+=candy[i];
     }
 
     
