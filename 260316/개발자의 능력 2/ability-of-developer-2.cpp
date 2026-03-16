@@ -36,9 +36,11 @@ int main() {
         //for: 팀1 팀원2
         for(int j=i+1;j<6;j++){
             //for: 팀2 팀원1   
-            for(int k=j+1;k<6;k++){
+            for(int k=0;k<6;k++){
                 //for: 팀2 팀원 2
                 for(int l=k+1;l<6;l++){
+                    //팀원중복x
+                    if (k == i || k == j || l == i || l == j) continue;
                     //능력차이 계산
                     //min갱신
                     result=min(GetResult(i,j,k,l),result);
