@@ -23,7 +23,7 @@ int main() {
         int candyCount=0;
         //for: 중심점-k~중심점+k까지 사탕 수 세기
         for(int j=i-K;j<=i+K;j++){
-            if(!(j-K>=0 && j+K<ARR_SIZE)){
+            if(!(j>=0 && j<ARR_SIZE)){
                 continue;
             }
             candyCount+=arr[j];
