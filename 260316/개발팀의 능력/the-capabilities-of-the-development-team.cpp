@@ -49,6 +49,10 @@ int main() {
             for(int k=0;k<5;k++){
                 //for: 팀2 팀원2
                 for(int l=k+1;l<5;l++){
+                    //팀원중복x
+                    if(i==k||i==l||j==k||j==l){
+                        continue;
+                    }
                     if(IsDiffEachAbility(i,j,k,l)==false){
                         continue;
                     }
