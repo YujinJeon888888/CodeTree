@@ -9,7 +9,7 @@ int candy[100], pos[100];
 int main() {
     cin >> N >> K;
     //배열에 캔디넣기
-    int arr[ARR_SIZE]={0};
+    int arr[ARR_SIZE]={0,};
     for (int i = 0; i < N; i++) {
         cin >> candy[i] >> pos[i];
         arr[pos[i]]=candy[i];
