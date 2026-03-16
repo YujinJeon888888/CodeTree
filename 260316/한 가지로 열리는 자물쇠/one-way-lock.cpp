@@ -18,9 +18,7 @@ int main() {
         for(int j=1;j<=N;j++){
             //for: 백의자리
             for(int k=1;k<=N;k++){
-                if(abs(a-i)<=2|| abs(a-j)<=2|| abs(a-k)<=2 
-                ||abs(b-i)<=2|| abs(b-j)<=2|| abs(b-k)<=2 
-                ||abs(c-i)<=2|| abs(c-j)<=2|| abs(c-k)<=2 )
+                if(abs(a-i)<=2|| abs(b-j)<=2|| abs(c-k)<=2)
                     count++;  
             }        
         }
