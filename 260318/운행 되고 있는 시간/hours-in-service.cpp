@@ -20,7 +20,7 @@ int main() {
     //for: 해고할 사람
     for(int i=0;i<N;i++){
         int time=0;
-        vector<int> arr(100,0); 
+        vector<int> arr(1000+1,0); 
         //for: 남은 인원으로 운영되는 시간 카운트(겹치는시간없)
         for(int j=0;j<N;j++){
             //해고할 사람이면 continue
