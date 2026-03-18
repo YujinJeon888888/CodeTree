@@ -28,23 +28,20 @@ int main() {
         int xMin=INT_MAX;
         int yMax=INT_MIN;
         int yMin=INT_MAX;
-
-        //  for :
         for(int j=0;j<N;j++){
-            if(arr[i].first==-1){
+            if(arr[j].first==-1){
                 continue;
             }
             // x최대, y최대, x최소, y최소 구하기
-            xMax=max(xMax,arr[i].first);
-            yMax=max(yMax,arr[i].second);
-            xMin=min(xMin,arr[i].first);
-            yMin=min(yMin,arr[i].second);
+            xMax=max(xMax,arr[j].first);
+            yMax=max(yMax,arr[j].second);
+            xMin=min(xMin,arr[j].first);
+            yMin=min(yMin,arr[j].second);
         }
-            
-        // 넓이 곱하기
         int width = abs(xMax-xMin);
         int height = abs(yMax-yMin);
         resultArea=min(resultArea,width*height);        
+        
         //점 복구
         arr[i]=temp;
     }
