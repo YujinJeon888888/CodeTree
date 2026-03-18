@@ -1,5 +1,6 @@
 #include <iostream>
 #include <algorithm>
+#include <vector>
 using namespace std;
 
 int N;
@@ -19,13 +20,22 @@ int main() {
     //for: 해고할 사람
     for(int i=0;i<N;i++){
         int time=0;
-        //for: 남은 인원으로 운영되는 시간 카운트
+        vector<int> arr(100,0); 
+        //for: 남은 인원으로 운영되는 시간 카운트(겹치는시간없)
         for(int j=0;j<N;j++){
             //해고할 사람이면 continue
             if(i==j){
                 continue;
             }
-            time+=(y[j]-x[j]);
+            for(int k=x[j];k<y[j];k++){
+                arr[k]++;
+            }
+        }
+        for(const auto& val:arr){
+            if(val!=1){
+                continue;
+            }
+            time++;
         }
         //최대값 갱신
         answer=max(answer,time);
