@@ -9,14 +9,14 @@ bool IsOverlapped(pair<int,int> line1, pair<int,int> line2){
     int ax2=line1.second;
     int bx1=line2.first;
     int bx2=line2.second;
-    // 밑바닥 순서와 천장 순서가 엇갈리면 무조건 중간에서 만남.
-    if ((ax1 < bx1 && ax2 > bx2) || (ax1 > bx1 && ax2 < bx2)) {
-        return true;
+    // 🌟 안 겹치는 조건: 밑에서도 왼쪽, 위에서도 왼쪽 (혹은 그 반대)
+    // 이 조건을 만족하지 않으면 무조건 겹치는 구간이 발생합니다.
+    if ((ax1 < bx1 && ax2 < bx2) || (ax1 > bx1 && ax2 > bx2)) {
+        return false; // 안 겹침
     }
-    if (ax1 == bx1 || ax2 == bx2) {
-        return true;
-    }
-    return false;
+    
+    // 그 외의 모든 경우(엇갈림, 포함, 끝점 닿음)는 겹침!
+    return true;
 }
 
 int main() {
@@ -31,7 +31,7 @@ int main() {
     int count=0;
     //for: 선분1
     for(int i=0;i<N;i++){
-        bool isOverlapped;
+        bool isOverlapped=false;
         //for: 선분2
         for(int j=0;j<N;j++){
             if(i==j){
@@ -39,8 +39,8 @@ int main() {
             }
 
             //선분1과 모든 선분이 겹치지 않으면 count++
-            isOverlapped = IsOverlapped(arr[i],arr[j]);
-            if(isOverlapped){
+            if(IsOverlapped(arr[i],arr[j])){
+                isOverlapped=true;
                 break;
             }
         }
@@ -49,6 +49,7 @@ int main() {
             count++;
         }
     }
+
     cout<<count;
     return 0;
 }
