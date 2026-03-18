@@ -7,12 +7,13 @@ int N;
 bool IsOverlapped(pair<int,int> line1, pair<int,int> line2){
     int ax1=line1.first;
     int ax2=line1.second;
-    int ax1=line1.first;
-    int ax2=line1.second;
-    // 밑바닥 순서와 천장 순서가 엇갈리면 무조건 중간에서 만납니다.
+    int bx1=line2.first;
+    int bx2=line2.second;
+    // 밑바닥 순서와 천장 순서가 엇갈리면 무조건 중간에서 만남.
     if ((ax1 < bx1 && ax2 > bx2) || (ax1 > bx1 && ax2 < bx2)) {
         return true;
     }
+    return false;
 }
 
 int main() {
