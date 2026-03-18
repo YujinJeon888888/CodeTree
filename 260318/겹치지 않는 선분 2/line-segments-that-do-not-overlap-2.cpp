@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include <vector>
 using namespace std;
 
 int N;
@@ -13,6 +13,7 @@ bool IsOverlapped(pair<int,int> line1, pair<int,int> line2){
     if ((ax1 < bx1 && ax2 > bx2) || (ax1 > bx1 && ax2 < bx2)) {
         return true;
     }
+    
     return false;
 }
 
@@ -41,6 +42,6 @@ int main() {
             }
         }
     }
-        
+    cout<<count;
     return 0;
 }
