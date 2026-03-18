@@ -29,17 +29,22 @@ int main() {
     int count=0;
     //for: 선분1
     for(int i=0;i<N;i++){
+        bool isOverlapped;
         //for: 선분2
         for(int j=0;j<N;j++){
             if(i==j){
                 continue;
             }
 
-            //선분1과 선분2가 겹치지 않으면 count++
-            bool isOverlapped = IsOverlapped(arr[i],arr[j]);
-            if(!isOverlapped){
-                count++;
+            //선분1과 모든 선분이 겹치지 않으면 count++
+            isOverlapped = IsOverlapped(arr[i],arr[j]);
+            if(isOverlapped){
+                break;
             }
+        }
+        
+        if(!isOverlapped){
+            count++;
         }
     }
     cout<<count;
