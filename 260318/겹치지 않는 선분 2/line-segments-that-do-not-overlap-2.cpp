@@ -1,0 +1,45 @@
+#include <iostream>
+
+using namespace std;
+
+int N;
+
+bool IsOverlapped(pair<int,int> line1, pair<int,int> line2){
+    int ax1=line1.first;
+    int ax2=line1.second;
+    int ax1=line1.first;
+    int ax2=line1.second;
+    // 밑바닥 순서와 천장 순서가 엇갈리면 무조건 중간에서 만납니다.
+    if ((ax1 < bx1 && ax2 > bx2) || (ax1 > bx1 && ax2 < bx2)) {
+        return true;
+    }
+}
+
+int main() {
+    cin >> N;
+    vector<pair<int,int>> arr(N);
+    for (int i = 0; i < N; i++) {
+        //시작점x, 끝점x
+        cin >> arr[i].first >> arr[i].second;
+    }
+
+    // Please write your code here.
+    int count=0;
+    //for: 선분1
+    for(int i=0;i<N;i++){
+        //for: 선분2
+        for(int j=0;j<N;j++){
+            if(i==j){
+                continue;
+            }
+
+            //선분1과 선분2가 겹치지 않으면 count++
+            bool isOverlapped = IsOverlapped(arr[i],arr[j]);
+            if(!isOverlapped){
+                count++;
+            }
+        }
+    }
+        
+    return 0;
+}
