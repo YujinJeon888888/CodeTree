@@ -22,5 +22,6 @@ int main() {
             cIndex++;
         }
     }
+    cout<<result;
     return 0;
 }
