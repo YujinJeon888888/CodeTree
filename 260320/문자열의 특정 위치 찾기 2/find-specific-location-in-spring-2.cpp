@@ -17,6 +17,7 @@ int main() {
             }
             if(c==findC){
                 result++;
+                cout<<s<<'\n';
                 break;
             }
             cIndex++;
