@@ -10,8 +10,9 @@ int main() {
     cin>>findC;
     int result=0;
     for(const auto& s:sArr){
-        int cIndex=1;
+        int cIndex=0;
         for(const auto& c:s){
+            cIndex++;
             if(cIndex!=3&&cIndex!=4){
                 continue;
             }
@@ -20,7 +21,6 @@ int main() {
                 cout<<s<<'\n';
                 break;
             }
-            cIndex++;
         }
     }
     cout<<result;
