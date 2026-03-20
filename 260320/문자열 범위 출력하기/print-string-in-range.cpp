@@ -6,8 +6,8 @@ int main() {
     string s;
    
     getline(cin,s);
-    
-    for(int i=2;i<9;i++){
+
+    for(int i=2;i<10;i++){
         cout<<s[i];
     }
 
