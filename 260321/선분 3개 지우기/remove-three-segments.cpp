@@ -16,7 +16,7 @@ int main() {
     for(int i=0;i<n;i++){
         int a,b;
         cin>>a>>b;
-        lines.push_back({a,b});
+        lines[i]={a,b};
         for(int j=a;j<=b;j++){
             line[j]++;
         }
@@ -57,6 +57,5 @@ int main() {
     }
     cout<<ans;
         
-    
     return 0;
 }
