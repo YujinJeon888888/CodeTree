@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <set>
 using namespace std;
 
 int n,k;
@@ -14,7 +15,7 @@ int main() {
 
     // Please write your code here.
     int maxBombCount=-1;
-    int ans=-1;
+    set<int, greater<int>> ans;
 
     //폭탄 번호 고르기
     for(int bombNum=0;bombNum<=1000;bombNum++){
@@ -39,19 +40,19 @@ int main() {
             index++;
 
             if(bombs[index]==bombNum){
-                bombCount++;
-                iterateNum=k;
+                ans.insert(bombNum);
+                break;
             }
-        }
-            
-        //max카운트 갱신, result번호 갱신
-        if(bombCount>maxBombCount){
-            maxBombCount=bombCount;
-            ans=bombNum;
         }
     }
 
-    cout<<ans;
+    if(set.size()==0){
+        cout<<-1;    
+    }
+    else{
+        cout<<*ans.begin();
+    }
+    
 
     return 0;
 }
