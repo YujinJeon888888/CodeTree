@@ -22,7 +22,7 @@ int main() {
         //arr순회: 같은 폭탄 번호면 이걸 시작점으로하고 break;
         int startIndex=-1;
         for(int i=0;i<n;i++){
-            if(bombs[i]==bombnum){
+            if(bombs[i]==bombNum){
                 startIndex=i;
             }
         }
