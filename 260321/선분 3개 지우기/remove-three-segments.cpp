@@ -40,7 +40,7 @@ int main() {
                     temp[index]--;    
                 }
                 //for: 겹치는지 확인
-                bool isOvelapped=false;
+                bool isOverlapped=false;
                 for(const auto& val:temp){
                     if(val>=2){
                         isOverlapped=true;
