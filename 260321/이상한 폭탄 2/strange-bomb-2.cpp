@@ -51,7 +51,7 @@ int main() {
         }
     }
 
-    cout<<bombNum;
+    cout<<ans;
 
     return 0;
 }
