@@ -25,6 +25,7 @@ int main() {
         for(int i=0;i<n;i++){
             if(bombs[i]==bombNum){
                 startIndex=i;
+                break;
             }
         }
         //그 폭탄 없으면 continue
