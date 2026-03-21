@@ -16,11 +16,12 @@ int main() {
     for(int i=0;i<n;i++){
         int a,b;
         cin>>a>>b;
+        lines.push_back({a,b});
         for(int j=a;j<=b;j++){
             line[j]++;
-            lines.push_back({a,b});
         }
     }
+
     //선분1
     for(int i=0;i<n;i++){
         //선분2
