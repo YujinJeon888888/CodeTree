@@ -30,13 +30,13 @@ int main() {
                 //temp에 line복제
                 auto temp = line;
                 //temp에서 선분1,2,3제거
-                for(int index=temp[i].first;index<=temp[i].second;index++){
+                for(int index=lines[i].first;index<=lines[i].second;index++){
                     temp[index]--;    
                 }
-                for(int index=temp[j].first;index<=temp[j].second;index++){
+                for(int index=lines[j].first;index<=lines[j].second;index++){
                     temp[index]--;    
                 }
-                for(int index=temp[k].first;index<=temp[k].second;index++){
+                for(int index=lines[k].first;index<=lines[k].second;index++){
                     temp[index]--;    
                 }
                 //for: 겹치는지 확인
