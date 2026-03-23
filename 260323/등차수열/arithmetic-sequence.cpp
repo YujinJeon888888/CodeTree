@@ -19,11 +19,11 @@ int main() {
         int count=0;
         //ai,aj
         for(int ai=0;ai<n;ai++){
-            for(int aj=0;aj<n;aj++){
+            for(int aj=ai+1;aj<n;aj++){
                 if(ai==aj){
                     continue;
                 }
-                if(ai-i==aj+i){
+                if(a[ai] + a[aj] == 2 * i){
                     count++;
                 }
             }
